@@ -1,0 +1,16 @@
+{
+  "name": "headlight-node-sdk-sample",
+  "version": "1.0.0",
+  "description": "A very basic example of a Headlight SDK app",
+  "main": "NothingToSeeHere.js",
+  "scripts": {
+    "start": "node node_modules/headlight-node-sdk/server/Headlight-NodeSDK-Server.js",
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -u tdd -R spec",
+    "test": "./node_modules/mocha/bin/_mocha -u tdd -R spec"
+  },
+  "repository": "",
+  "author": "steven velozo <steven.velozo@paviasystems.com>",
+  "dependencies": {
+    "headlight-node-sdk": "^2.0.13"
+  }
+}
