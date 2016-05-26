@@ -1,4 +1,3 @@
-
 /**
 * This includes the Pavia Headlight Node SDK gulpfile
 *
