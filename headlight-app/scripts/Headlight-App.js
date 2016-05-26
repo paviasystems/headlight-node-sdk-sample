@@ -14,10 +14,9 @@ pict.features.AppendorExample.initialize = function(pSession)
 // Initialize the Headlight App
 pict.features.AppendorExample.load = function(pRecord, pProject, pSession)
 {
-	if (pRecord.IDAppData === 0)
-	{
-		// Initialize record
-	}
+	// Load the template
+	$('#appContentContainer').html(pict.libs.underscore.template($('#AppendorExample_Main').text()));
+	//if (pRecord.IDAppData === 0){}
 	$('#demoAppForm').submit(
 		function()
 		{
