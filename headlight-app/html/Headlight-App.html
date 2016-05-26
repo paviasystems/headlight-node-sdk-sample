@@ -1,0 +1,44 @@
+<script type="text/template" id="AppendorExample_Main">
+    <h1><%= Name %></h1>
+    <div class="validation-summary"></div>
+
+
+    <div class="col-sm-12 page-header">
+        <h2>Appended String Calculator</h2>
+    </div>
+    
+    <div class="box">
+        <div class="row">
+
+            <form class="form-horizontal">
+                <fieldset>
+        
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="Name">Name</label>  
+                        <div class="col-md-10">
+                            <input id="Name" name="Name" type="text" placeholder="Appendor Name" class="form-control input-md appendor-name" value="<%= Name %>">
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label for="left_value">Left</label>
+                        <input type="text" class="form-control" id="left_value">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="right_value">Right</label>
+                        <input type="text" class="form-control" id="right_value">
+                    </div>
+            
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success"><i class="fa fa-pie-chart"></i> Calculate</button>
+                    </div>
+            
+                    <div class="col-sm-12">
+                        <h4 id="demoResult"></h4>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</script>
