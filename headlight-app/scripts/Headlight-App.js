@@ -14,8 +14,10 @@ pict.features.AppendorExample.initialize = function(pSession)
 // Initialize the Headlight App
 pict.features.AppendorExample.load = function(pRecord, pProject, pSession)
 {
+	var HeadlightApp = pict.features.HeadlightApp;
 	// Load the template
-	$('#appContentContainer').html(pict.libs.underscore.template($('#AppendorExample_Main').text()));
+	var template = _.template($('#AppendorExample_Main').html());
+	$('#headlight-app').html(template(pRecord));
 	//if (pRecord.IDAppData === 0){}
 	$('#demoAppForm').submit(
 		function()
@@ -32,4 +34,20 @@ pict.features.AppendorExample.load = function(pRecord, pProject, pSession)
 
 			return false;
 		});
+		
+	$('.save-calculation').on('click', function(){
+
+		var tmpLeft = $('#left_value').val();
+		var tmpRight = $('#right_value').val();
+		
+		pRecord.model.Left = tmpLeft;
+		pRecord.model.Right = tmpRight;
+
+		HeadlightApp.AppData.save(pRecord, function(record){
+			console.log('saved', record);
+			$('#demoResult').html('Saved! (' + JSON.stringify(record) + ')');
+		}, function(err){
+			// TODO: handle errors
+		});
+	});
 };
