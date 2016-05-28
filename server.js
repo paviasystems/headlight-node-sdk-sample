@@ -1,9 +1,2 @@
-var _Orator = require('headlight-node-sdk').new(
-	{
-		Product:'Headlight-SDK-App-SAMPLE',
-		// The folder to serve static web files from for this app.  By default, use the Stage folder.
-		StaticContentFolder: __dirname+'/stage/',
-		ConfigFile: __dirname+"/Headlight-Node-SDK-Sample-App-Config.json"
-	}).orator();
-
-_Orator.startWebServer();
+// Create a new Orator web server
+var _Orator = require(__dirname+'/_node_modules/headlight-node-sdk').new({}).orator().startWebServer();
