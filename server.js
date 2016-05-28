@@ -1,4 +1,4 @@
-var _Orator = require(__dirname+'/_node_modules_working/headlight-node-sdk/server/Headlight-NodeSDK.js').new(
+var _Orator = require('headlight-node-sdk').new(
 	{
 		Product:'Headlight-SDK-App-SAMPLE',
 		// The folder to serve static web files from for this app.  By default, use the Stage folder.

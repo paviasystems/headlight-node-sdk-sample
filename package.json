@@ -1,6 +1,6 @@
 {
   "name": "headlight-node-sdk-sample",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A very basic example of a Headlight SDK app",
   "main": "NothingToSeeHere.js",
   "scripts": {
@@ -11,6 +11,6 @@
   "repository": "",
   "author": "steven velozo <steven.velozo@paviasystems.com>",
   "dependencies": {
-    "headlight-node-sdk": "^2.0.14"
+    "headlight-node-sdk": "^2.1.0"
   }
 }
