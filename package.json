@@ -9,6 +9,6 @@
   "repository": "",
   "author": "steven velozo <steven.velozo@paviasystems.com>",
   "dependencies": {
-    "headlight-node-sdk": "^2.1.2"
+    "headlight-node-sdk": "^2.1.3"
   }
 }
