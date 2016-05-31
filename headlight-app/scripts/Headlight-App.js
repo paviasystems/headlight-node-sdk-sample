@@ -43,7 +43,7 @@ pict.features.AppendorExample.load = function(pRecord, pProject, pSession)
 		pRecord.model.Left = tmpLeft;
 		pRecord.model.Right = tmpRight;
 
-		HeadlightApp.AppData.save(pRecord, function(record){
+		HeadlightApp.Data.AppData.save(pRecord, function(record){
 			console.log('saved', record);
 			$('#demoResult').html('Saved! (' + JSON.stringify(record) + ')');
 		}, function(err){
