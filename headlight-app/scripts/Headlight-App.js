@@ -48,6 +48,7 @@ pict.features.AppendorExample.load = function(pRecord, pProject, pSession)
 			$('#demoResult').html('Saved! (' + JSON.stringify(record) + ')');
 		}, function(err){
 			// TODO: handle errors
+			$('#demoResult').html(err);
 		});
 	});
 };
