@@ -42,6 +42,8 @@ pict.features.AppendorExample.load = function(pRecord, pProject, pSession)
 		
 		pRecord.model.Left = tmpLeft;
 		pRecord.model.Right = tmpRight;
+		
+		pRecord.model.Title = tmpLeft + ' + ' + tmpRight;
 
 		HeadlightApp.Data.AppData.save(pRecord, function(record){
 			console.log('saved', record);
