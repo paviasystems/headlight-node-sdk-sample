@@ -43,14 +43,15 @@ pict.features.AppendorExample.load = function(pRecord, pProject, pSession)
 		pRecord.model.Left = tmpLeft;
 		pRecord.model.Right = tmpRight;
 		
-		pRecord.model.Title = tmpLeft + ' + ' + tmpRight;
+		pRecord.Title = pRecord.model.Title = tmpLeft + ' + ' + tmpRight;
+		pRecord.Description = 'Appending of ' + tmpLeft + ' and ' + tmpRight;
 
-		HeadlightApp.Data.AppData.save(pRecord, function(record){
+		HeadlightApp.Data.AppData.save(pRecord, { success: function(record){
 			console.log('saved', record);
 			$('#demoResult').html('Saved! (' + JSON.stringify(record) + ')');
-		}, function(err){
+		}, error: function(err){
 			// TODO: handle errors
 			$('#demoResult').html(err);
-		});
+		}});
 	});
 };
